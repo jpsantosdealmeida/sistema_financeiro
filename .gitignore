@@ -1,0 +1,4 @@
+# Ignorar a virtual environment
+venv/
+.venv/
+ambiente/
