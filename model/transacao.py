@@ -1,11 +1,12 @@
 from dataclasses import dataclass
-from datetime import datetime,date
-
+from datetime import date
+from .categoria import Categoria
 @dataclass
 class Transacao:
-    id_categoria: int
-    tipo: str
+    categoria: Categoria
+    # tipo: str categoria.tipo
     valor: float
-    descricao: str
+    # descricao: str categoria.descricao
     data_transacao: date
     data_registro: date
+    

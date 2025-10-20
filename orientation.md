@@ -34,7 +34,7 @@ Desenvolver um sistema pessoal de controle financeiro — **FinCatch** — para 
 | Campo | Tipo | Descrição |
 |-------|------|------------|
 | id | SERIAL PK | Identificador único |
-| nome | VARCHAR(100) | Nome da categoria |
+| nome | VARCHAR(100) | Nome da categoria | - Lazer
 | tipo | VARCHAR(20) | 'receita' ou 'despesa' |
 | descricao | TEXT | (opcional) detalhes |
 

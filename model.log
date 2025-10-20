@@ -1,0 +1,8 @@
+2025-10-19 15:36:00,590 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-19 15:36:00,610 - INFO - SUCESSO: Categorias selecionadas.
+2025-10-19 15:36:12,902 - ERROR - ERRO: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgares"
+.
+2025-10-19 15:57:35,443 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-19 15:57:35,444 - INFO - SUCESSO: Categorias selecionadas.
+2025-10-19 15:58:18,550 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-19 15:58:18,551 - INFO - SUCESSO: Categorias selecionadas.
