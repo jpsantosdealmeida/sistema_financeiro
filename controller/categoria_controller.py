@@ -55,8 +55,8 @@ class CategoriaController:
         try:
             cursor = conexao.cursor()
             query = f'UPDATE categoria SET {" ,".join(campos)} WHERE id = %s'
-            values = (tuple(values),tuple(id_categoria,))
-            cursor.execute(query,values)
+            valores.append(id_categoria)
+            cursor.execute(query,tuple(valores))
             conexao.commit()
             mdb.logging.info(f'SUCESSO: categoria com id: {id_categoria} atualizada.' )
             return True

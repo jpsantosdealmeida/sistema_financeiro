@@ -7,10 +7,10 @@ class TransacaoController:
     def inserir(transacao : Transacao):
         conexao = mdb.Database.obter_conexao()
         try:
-            curso = conexao.cursor()
-            query = 'INSERT INTO transacaocao (tipo,valor,descricao,data_transacaocao,data_registro) VALUES (%s,%s,%s,%s,%s)'
+            cursor = conexao.cursor()
+            query = 'INSERT INTO transacao (tipo,valor,descricao,data_transacao,data_registro) VALUES (%s,%s,%s,%s,%s)'
             values = (transacao.categoria.tipo,transacao.valor,transacao.categoria.descricao,transacao.data_transacao,transacao.data_registro)
-            curso.execute(query,values)
+            cursor.execute(query,values)
             conexao.commit()
             mdb.logging.info(f'SUCESSO: Transacao tipo {transacao.categoria.tipo} inserida.')
             return True
@@ -62,7 +62,7 @@ class TransacaoController:
         try:
             cursor = conexao.cursor()
             query = f'UPDATE transacao SET {" ,".join(campos)} WHERE id=%s'
-            valores.append()
+            valores.append(id_transacao)
             cursor.execute(query,tuple(valores))
             conexao.commit()
             mdb.logging.info(f'SUCESSO: Transação com id: {id_transacao} atualizada.' )
@@ -94,7 +94,7 @@ class TransacaoController:
         conexao = mdb.Database.obter_conexao()
         try:
             cursor = conexao.cursor()
-            query = 'SELECT * FROM transacaocao WHERE id=%s'
+            query = 'SELECT * FROM transacao WHERE id=%s'
             value = (id_transacao,)
             cursor.execute(query,value)
             result = cursor.fetchone()
