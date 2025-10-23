@@ -1,11 +1,9 @@
-from model.categoria import Categoria
-from controller.categoria_controller import CategoriaController
-from model.transacao import Transacao
-from controller.trasacao_controller import TransacaoController
+import customtkinter as ctk
+from view.tela_principal import TelaPrincipal
 
-categoria_lazer = Categoria('lazer','receita','restaurantes')
-t1 = Transacao(categoria_lazer,1000,'2025-10-10','2025-10-10')
-a = (CategoriaController.listar_todos())
+if __name__ == '__main__':
+    app = ctk.CTk()
+    app.geometry('700x700')
 
-
-TransacaoController.inserir(t1)
+    TelaPrincipal(app)
+    app.mainloop()

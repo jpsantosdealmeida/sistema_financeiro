@@ -90,7 +90,7 @@ class TransacaoController:
 
     
     @staticmethod
-    def lista_um(id_transacao):
+    def listar_um(id_transacao):
         conexao = mdb.Database.obter_conexao()
         try:
             cursor = conexao.cursor()
@@ -103,4 +103,17 @@ class TransacaoController:
         
         except mdb.Error as e:
             mdb.logging.error(f'ERRO ao tentar selecionar a transação de id: {id_transacao}: {e}.' )
+            return e
+        
+    def view_treeview():
+        conexao = mdb.Database.obter_conexao()
+        try:
+            cursor = conexao.cursor()
+            cursor.execute('SELECT * FROM visualizacao_frame_main')
+            linhas_view = cursor.fetchall()
+            mdb.logging.info(f'SUCESSO: View selecionada.' )
+            return linhas_view
+        
+        except mdb.Error as e:
+            mdb.logging.error(f'ERRO ao tentar selecionar a view: {e}.' )
             return e

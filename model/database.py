@@ -25,7 +25,7 @@ class Database:
                         user = 'postgres',
                         password = 'marcos28',
                         host = 'localhost',
-                        dbname = 'sistema_financeiro'
+                        dbname = 'sistema_finan'
                     )
                 logging.info(f'SUCESSO: Conexão realizada com sucesso.' )
 
