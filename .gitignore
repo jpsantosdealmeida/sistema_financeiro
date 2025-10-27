@@ -1,5 +1,6 @@
-# Ignorar a virtual environment
+# Ignorar ambiente virtual
 venv/
 .venv/
-venv/
-    
+
+# Ignorar todos os arquivos .log
+*.log

@@ -111,9 +111,22 @@ class TransacaoController:
             cursor = conexao.cursor()
             cursor.execute('SELECT * FROM visualizacao_frame_main')
             linhas_view = cursor.fetchall()
-            mdb.logging.info(f'SUCESSO: View selecionada.' )
+            mdb.logging.info(f'SUCESSO: View visualizacao_frame_main selecionada.' )
             return linhas_view
         
         except mdb.Error as e:
-            mdb.logging.error(f'ERRO ao tentar selecionar a view: {e}.' )
+            mdb.logging.error(f'ERRO ao tentar selecionar a view visualizacao_frame_main: {e}.' )
+            return e
+        
+    def view_treeview_transacoes():
+        conexao = mdb.Database.obter_conexao()
+        try:
+            cursor = conexao.cursor()
+            cursor.execute('SELECT * FROM transacoes_frame_transacoes')
+            linhas_view = cursor.fetchall()
+            mdb.logging.info(f'SUCESSO: View transacoes_frame_transacoes selecionada.' )
+            return linhas_view
+        
+        except mdb.Error as e:
+            mdb.logging.error(f'ERRO ao tentar selecionar a view transacoes_frame_transacoes: {e}.' )
             return e

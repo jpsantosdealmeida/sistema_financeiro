@@ -19,3 +19,160 @@ LINE 1: SELECT * FROM visualizacao_frame_main
 2025-10-22 21:51:51,763 - INFO - SUCESSO: View selecionada.
 2025-10-22 21:52:14,177 - INFO - SUCESSO: Conexão realizada com sucesso.
 2025-10-22 21:52:14,179 - INFO - SUCESSO: View selecionada.
+2025-10-25 13:10:38,407 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-25 13:10:38,445 - INFO - SUCESSO: View selecionada.
+2025-10-25 18:45:35,300 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-25 18:45:35,303 - INFO - SUCESSO: View selecionada.
+2025-10-26 19:35:53,650 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 19:35:53,655 - INFO - SUCESSO: View selecionada.
+2025-10-26 19:37:37,931 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 19:37:37,934 - INFO - SUCESSO: View selecionada.
+2025-10-26 19:38:06,935 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 19:38:06,938 - INFO - SUCESSO: View selecionada.
+2025-10-26 19:43:33,303 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 19:43:33,306 - INFO - SUCESSO: View selecionada.
+2025-10-26 19:51:59,247 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 19:51:59,250 - INFO - SUCESSO: View selecionada.
+2025-10-26 20:01:05,679 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 20:01:05,683 - INFO - SUCESSO: View selecionada.
+2025-10-26 20:01:30,110 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 20:01:30,114 - INFO - SUCESSO: View selecionada.
+2025-10-26 20:02:29,388 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 20:02:29,391 - INFO - SUCESSO: View selecionada.
+2025-10-26 20:02:50,085 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 20:02:50,089 - INFO - SUCESSO: View selecionada.
+2025-10-26 20:32:53,970 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 20:32:53,973 - INFO - SUCESSO: View selecionada.
+2025-10-26 20:33:56,620 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 20:33:56,623 - INFO - SUCESSO: View selecionada.
+2025-10-26 20:34:34,474 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 20:34:34,477 - INFO - SUCESSO: View selecionada.
+2025-10-26 20:34:53,694 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 20:34:53,696 - INFO - SUCESSO: View selecionada.
+2025-10-26 20:35:05,204 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 20:35:05,207 - INFO - SUCESSO: View selecionada.
+2025-10-26 20:35:14,310 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 20:35:14,313 - INFO - SUCESSO: View selecionada.
+2025-10-26 20:35:32,582 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 20:35:32,585 - INFO - SUCESSO: View selecionada.
+2025-10-26 20:35:53,759 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 20:35:53,762 - INFO - SUCESSO: View selecionada.
+2025-10-26 20:37:03,653 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 20:37:03,655 - INFO - SUCESSO: View selecionada.
+2025-10-26 20:41:00,291 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 20:41:00,293 - INFO - SUCESSO: View selecionada.
+2025-10-26 20:41:34,517 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 20:41:34,520 - INFO - SUCESSO: View selecionada.
+2025-10-26 20:42:53,454 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 20:42:53,457 - INFO - SUCESSO: View selecionada.
+2025-10-26 20:44:21,622 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 20:44:21,625 - INFO - SUCESSO: View selecionada.
+2025-10-26 20:44:58,516 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 20:44:58,518 - INFO - SUCESSO: View selecionada.
+2025-10-26 20:45:19,294 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 20:45:19,296 - INFO - SUCESSO: View selecionada.
+2025-10-26 20:45:27,426 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 20:45:27,429 - INFO - SUCESSO: View selecionada.
+2025-10-26 20:45:39,745 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 20:45:39,749 - INFO - SUCESSO: View selecionada.
+2025-10-26 20:47:19,663 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 20:47:19,665 - INFO - SUCESSO: View selecionada.
+2025-10-26 20:48:05,497 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 20:48:05,500 - INFO - SUCESSO: View selecionada.
+2025-10-26 20:49:06,455 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 20:49:06,458 - INFO - SUCESSO: View selecionada.
+2025-10-26 20:49:40,114 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 20:49:40,117 - INFO - SUCESSO: View selecionada.
+2025-10-26 20:51:39,066 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 20:51:39,069 - INFO - SUCESSO: View selecionada.
+2025-10-26 20:55:24,181 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 20:55:24,184 - INFO - SUCESSO: View selecionada.
+2025-10-26 20:55:42,898 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 20:55:42,902 - INFO - SUCESSO: View selecionada.
+2025-10-26 20:56:19,822 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 20:56:19,825 - INFO - SUCESSO: View selecionada.
+2025-10-26 20:57:14,174 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 20:57:14,177 - INFO - SUCESSO: View selecionada.
+2025-10-26 20:59:16,361 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 20:59:16,364 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:02:51,899 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 21:02:51,902 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:03:13,903 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 21:03:13,906 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:03:36,499 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 21:03:36,502 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:03:38,735 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:03:39,553 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:03:40,021 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:03:41,026 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:04:06,274 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 21:04:06,276 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:04:07,687 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:04:07,963 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:04:08,884 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:04:10,041 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:04:10,774 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:04:11,252 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:04:12,248 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:04:20,758 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 21:04:20,761 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:05:26,925 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 21:05:26,928 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:05:50,223 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 21:05:50,226 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:06:38,136 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 21:06:38,138 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:07:25,490 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 21:07:25,493 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:07:43,425 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 21:07:43,428 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:07:47,144 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 21:07:47,146 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:08:00,529 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 21:08:00,532 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:08:02,780 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:08:04,096 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:08:05,354 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:08:05,536 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:08:05,710 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:08:14,864 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:09:06,981 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 21:09:06,984 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:09:09,194 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:09:10,086 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:09:10,842 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:09:16,055 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 21:09:16,058 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:09:17,454 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:09:19,066 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:09:19,795 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:09:20,005 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:09:20,182 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:09:21,808 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:10:00,178 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 21:10:00,181 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:10:21,694 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 21:10:21,698 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:10:40,499 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 21:10:40,503 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:11:02,447 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 21:11:02,450 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:11:23,968 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 21:11:23,971 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:11:32,574 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 21:11:32,577 - INFO - SUCESSO: View selecionada.
+2025-10-26 21:25:37,764 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 21:25:37,767 - INFO - SUCESSO: View transacoes_frame_transacoes selecionada.
+2025-10-26 21:26:42,474 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 21:26:42,476 - INFO - SUCESSO: View visualizacao_frame_main selecionada.
+2025-10-26 21:26:42,477 - INFO - SUCESSO: View transacoes_frame_transacoes selecionada.
+2025-10-26 21:27:00,541 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 21:27:00,544 - INFO - SUCESSO: View visualizacao_frame_main selecionada.
+2025-10-26 21:27:23,188 - INFO - SUCESSO: Conexão realizada com sucesso.
+2025-10-26 21:27:23,191 - INFO - SUCESSO: View visualizacao_frame_main selecionada.
+2025-10-26 21:27:24,404 - INFO - SUCESSO: View transacoes_frame_transacoes selecionada.
+2025-10-26 21:27:27,004 - INFO - SUCESSO: View transacoes_frame_transacoes selecionada.
+2025-10-26 21:27:28,081 - INFO - SUCESSO: View transacoes_frame_transacoes selecionada.
+2025-10-26 21:27:30,824 - INFO - SUCESSO: View transacoes_frame_transacoes selecionada.
+2025-10-26 21:27:32,284 - INFO - SUCESSO: View transacoes_frame_transacoes selecionada.
+2025-10-26 21:27:39,249 - INFO - SUCESSO: View transacoes_frame_transacoes selecionada.

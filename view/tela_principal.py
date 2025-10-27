@@ -9,16 +9,18 @@ class TelaPrincipal:
     def __init__(self,master):
         self.master = master
         self.widgets()
-        self.funcoes()
+
 
     def widgets(self):
         self.fontes_padroes()
         self.header()
         self.menu()
         self.main()
+        self.funcoes()
 
     def funcoes(self):
         self.view_treeview()
+
     def fontes_padroes(self):
         self.fonte_titulo = ctk.CTkFont('Poppins',22,'bold')
         self.fonte_subtitulo = ctk.CTkFont('Roboto Medium',16,'normal')
@@ -27,13 +29,13 @@ class TelaPrincipal:
 
     def header(self):
         # Frame Barra azul 
-        self.frame_titulo = ctk.CTkFrame(self.master,fg_color='#2E86DE')
-        self.frame_titulo.grid(row=0,column=0,sticky='nswe')
-        self.frame_titulo.columnconfigure(0,weight=1)
+        self.frame_titulo_main = ctk.CTkFrame(self.master,fg_color='#2E86DE')
+        self.frame_titulo_main.grid(row=0,column=0,sticky='nswe')
+        self.frame_titulo_main.columnconfigure(0,weight=1)
 
         # -- Título -- 
         self.label_titulo_dinamico = ctk.CTkLabel(
-            self.frame_titulo,
+            self.frame_titulo_main,
             text='FinCatch',
             text_color='white',
             font=self.fonte_titulo)
@@ -46,21 +48,22 @@ class TelaPrincipal:
         self.frame_menu.columnconfigure((0,1,2,3),weight=1)
         self.frame_menu.grid(row=1,column=0,padx=15,sticky='nswe')
         # Início
-        self.label_inicio = ctk.CTkLabel(self.frame_menu,text='Início',font=self.fonte_subtitulo)
-        self.label_inicio.grid(row=0,column=0,padx=15,pady=10)
+        self.btn_inicio = ctk.CTkButton(self.frame_menu,text='Início',font=self.fonte_subtitulo,text_color='black',fg_color='transparent',hover_color="#E3E5E8",command=self.aba_inicio)
+        self.btn_inicio.grid(row=0,column=0,padx=15,pady=10)
 
         # Transações
-        self.label_inicio = ctk.CTkLabel(self.frame_menu,text='Transações',font=self.fonte_subtitulo)
-        self.label_inicio.grid(row=0,column=1,padx=15,pady=10)
+        self.btn_transacoes = ctk.CTkButton(self.frame_menu,text='Transações',font=self.fonte_subtitulo,text_color='black',fg_color='transparent',hover_color="#E3E5E8",command=self.aba_transacoes)
+        self.btn_transacoes.grid(row=0,column=1,padx=15,pady=10)
 
         # Categorias
-        self.label_inicio = ctk.CTkLabel(self.frame_menu,text='Categorias',font=self.fonte_subtitulo)
-        self.label_inicio.grid(row=0,column=2,padx=15,pady=10)
+        self.btn_categorias = ctk.CTkButton(self.frame_menu,text='Categorias',font=self.fonte_subtitulo,text_color='black',fg_color='transparent',hover_color="#E3E5E8")
+        self.btn_categorias.grid(row=0,column=2,padx=15,pady=10)
 
         # Configurações
-        self.label_inicio = ctk.CTkLabel(self.frame_menu,text='Configurações',font=self.fonte_subtitulo)
-        self.label_inicio.grid(row=0,column=3,padx=15,pady=10)
+        self.btn_configs = ctk.CTkButton(self.frame_menu,text='Configurações',font=self.fonte_subtitulo,text_color='black',fg_color='transparent',hover_color="#E3E5E8")
+        self.btn_configs.grid(row=0,column=3,padx=15,pady=10)
 
+    
     def main(self):
         # Frame principal que contém a área da esquerda e direita
         self.frame_main = ctk.CTkFrame(self.master, fg_color='white')
@@ -158,8 +161,50 @@ class TelaPrincipal:
         self.btn_atualizar.grid(row=0,column=3,padx=5,pady=5)
 
     def view_treeview(self):
-        self.linhas_view = TransacaoController.view_treeview()
-
-        if self.linhas_view:
-            for linha in self.linhas_view:
+        self.linhas_view_frame_main = TransacaoController.view_treeview()
+        
+        for id in self.treeview_sistema.get_children():
+            self.treeview_sistema.delete(id)
+        if self.linhas_view_frame_main:
+            for linha in self.linhas_view_frame_main:
                 self.treeview_sistema.insert('',ctk.END,text='',values=(linha[0],linha[1],linha[2],linha[3],linha[4]))
+
+    def view_treeview_transacoes(self):
+        self.linhas_view_frame_transacoes = TransacaoController.view_treeview_transacoes()
+        
+        for id in self.treeview_transacoes.get_children():
+            self.treeview_transacoes.delete(id)
+        if self.linhas_view_frame_transacoes:
+            for linha in self.linhas_view_frame_transacoes:
+                self.treeview_transacoes.insert('',ctk.END,text='',values=(linha[0],linha[1],linha[2],linha[3],linha[4],linha[5]))
+
+    def aba_inicio(self):
+        self.treeview_transacoes.grid_remove()
+        self.treeview_sistema.grid()
+
+
+    def aba_transacoes(self):
+        # Ocultando treview aba início
+        self.treeview_sistema.grid_remove()  
+
+        # Criando Frame histórico transações      
+        self.treeview_transacoes = ttk.Treeview(self.frame_treeview,show='headings',columns=('col1','col2','col3','col4','col5','col6'))        
+
+        # cabeçalho as colunas
+        self.treeview_transacoes.heading('col1',text='ID')
+        self.treeview_transacoes.heading('col2',text='Tipo')
+        self.treeview_transacoes.heading('col3',text='Valor')
+        self.treeview_transacoes.heading('col4',text='Descrição')
+        self.treeview_transacoes.heading('col5',text='Dt Transação')
+        self.treeview_transacoes.heading('col6',text='Dt Registro')
+
+        # ajuste colunas
+        self.treeview_transacoes.column('col1',width=70)
+        self.treeview_transacoes.column('col2',width=80)
+        self.treeview_transacoes.column('col3',width=70)
+        self.treeview_transacoes.column('col4',width=115)
+        self.treeview_transacoes.column('col5',width=100)      
+        self.treeview_transacoes.column('col6',width=100)      
+
+        self.treeview_transacoes.grid(row=0,column=0,sticky='nswe')
+        self.view_treeview_transacoes()
