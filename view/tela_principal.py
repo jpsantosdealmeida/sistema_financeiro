@@ -113,8 +113,8 @@ class TelaPrincipal:
 
 
         # valores das categorias em transações (filtro 2)
-        self.filtro_categoria = ctk.CTkComboBox(self.frame_filtros,values= TransacaoController.filtro_categoria_transacoes(),width=110)
-        self.filtro_categoria.set('')
+        self.filtro_categoria = ctk.CTkComboBox(self.frame_filtros,values=TransacaoController.filtro_categoria_transacoes(),width=110)
+        self.filtro_categoria.set('Categoria')
         self.filtro_categoria.grid(row=0,column=2,pady=3,padx=5)
 
         # valores de tipo em transações (filtro 3)
@@ -225,12 +225,32 @@ class TelaPrincipal:
         self.calendario_filtro_termino.pack()
            
     def btn_filtrar(self):
-        TransacaoController.view_treeview_filtrada(
+        view_filtrada = TransacaoController.view_treeview_filtrada(
             dt_inicio=self.entrada_filtro_data_inicio.get(),
             dt_final=self.entrada_filtro_data_termino.get(),
             categoria=self.filtro_categoria.get(),
             tipo=self.filtro_tipo.get()
         )
+
+        if view_filtrada:
+            for id in self.treeview_sistema.get_children():
+                self.treeview_sistema.delete(id)
+            for linha_filtrada in view_filtrada:
+                self.treeview_sistema.insert('',ctk.END,text='',values=(linha_filtrada[0],linha_filtrada[1],linha_filtrada[2],linha_filtrada[3],linha_filtrada[4]))
+
+    def btn_filtrar_transacao(self):
+        view_filtrada_transacao = TransacaoController.view_treeview_transacoes_filtrada(
+            dt_inicio=self.entrada_filtro_data_inicio.get(),
+            dt_final=self.entrada_filtro_data_termino.get(),
+            categoria=self.filtro_categoria.get(),
+            tipo=self.filtro_tipo.get()
+        )
+
+        if view_filtrada_transacao:
+            for id in self.treeview_transacoes.get_children():
+                self.treeview_transacoes.delete(id)
+            for linha_filtrada in view_filtrada_transacao:
+                self.treeview_transacoes.insert('',ctk.END,text='',values=(linha_filtrada[0],linha_filtrada[1],linha_filtrada[2],linha_filtrada[3],linha_filtrada[4],linha_filtrada[5]))
         
     def view_treeview(self):
         self.linhas_view_frame_main = TransacaoController.view_treeview()
@@ -280,5 +300,6 @@ class TelaPrincipal:
 
         self.treeview_transacoes.grid(row=0,column=0,sticky='nswe')
         self.view_treeview_transacoes()
+        self.btn_filtrar_view.configure(command=self.btn_filtrar_transacao)
 
        

@@ -105,6 +105,8 @@ class TransacaoController:
         except mdb.Error as e:
             mdb.logging.error(f'ERRO ao tentar selecionar a transação de id: {id_transacao}: {e}.' )
             return e
+        
+
     @staticmethod  
     def view_treeview():
         conexao = mdb.Database.obter_conexao()
@@ -148,13 +150,13 @@ class TransacaoController:
 
         try:
             cursor = conexao.cursor()
-            query = 'SELECT * FROM transacoes_frame_transacoes '
+            query = 'SELECT * FROM visualizacao_frame_main '
             if condicoes:
                 query += ' WHERE ' + ' AND ' .join(condicoes)
                 values = tuple(valores)
                 cursor.execute(query,values)
                 linhas_view_filtradas = cursor.fetchall()
-                print(linhas_view_filtradas)
+                return linhas_view_filtradas
         except mdb.Error as e:
             return e
             
@@ -174,6 +176,59 @@ class TransacaoController:
             mdb.logging.error(f'ERRO ao tentar selecionar a view transacoes_frame_transacoes: {e}.' )
             return e
         
+    @staticmethod
+    def view_treeview_transacoes_filtrada(dt_inicio=None,dt_final=None,categoria=None,tipo=None):
+        conexao = mdb.Database.obter_conexao()
+        condicoes = []
+        valores = []
+
+        # Filtro das datas
+        if dt_inicio and dt_final:
+            condicoes.append('data BETWEEN %s AND %s')
+            valores.extend([dt_inicio, dt_final])
+        elif dt_inicio:
+            condicoes.append('data >= %s')
+            valores.append(dt_inicio)
+        elif dt_final:
+            condicoes.append('data <= %s')
+            valores.append(dt_final)
+
+        if categoria:
+            condicoes.append('categoria = %s')
+            valores.append(categoria)
+
+        if tipo:
+            condicoes.append('tipo = %s')
+            valores.append(tipo)
+
+
+
+        try:
+            cursor = conexao.cursor()
+            query = 'SELECT * FROM transacoes_frame_transacoes '
+            if condicoes:
+                query += ' WHERE ' + ' AND ' .join(condicoes)
+                values = tuple(valores)
+                cursor.execute(query,values)
+                linhas_view_filtradas = cursor.fetchall()
+                return linhas_view_filtradas
+        except mdb.Error as e:
+            return e
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
     @staticmethod
     def filtro_categoria_transacoes():
         conexao = mdb.Database.obter_conexao()
