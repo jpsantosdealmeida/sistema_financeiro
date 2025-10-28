@@ -1,5 +1,6 @@
 import customtkinter as ctk
 from tkinter import ttk
+from tkcalendar import Calendar
 from model.categoria import Categoria
 from model.transacao import Transacao
 from controller.categoria_controller import CategoriaController
@@ -101,10 +102,39 @@ class TelaPrincipal:
         # Filtros
         self.frame_filtros = ctk.CTkFrame(self.frame_right)
         self.frame_filtros.grid(row=0, column=0, sticky='we', pady=5)
-        
+
+        # valores das categorias em transações (filtro 0)
+        self.entrada_filtro_data_inicio = ctk.CTkEntry(self.frame_filtros,placeholder_text='De: ',width=90)
+        self.entrada_filtro_data_inicio.grid(row=0,column=0,pady=3,padx=5)
+
+        # valores de tipo em transações (filtro 1)
+        self.entrada_filtro_data_termino = ctk.CTkEntry(self.frame_filtros,placeholder_text='Até: ',width=90)
+        self.entrada_filtro_data_termino.grid(row=0,column=1,pady=3,padx=5)
+
+
+        # valores das categorias em transações (filtro 2)
+        self.filtro_categoria = ctk.CTkComboBox(self.frame_filtros,values= TransacaoController.filtro_categoria_transacoes(),width=110)
+        self.filtro_categoria.set('')
+        self.filtro_categoria.grid(row=0,column=2,pady=3,padx=5)
+
+        # valores de tipo em transações (filtro 3)
+        self.filtro_tipo = ctk.CTkComboBox(self.frame_filtros,values= TransacaoController.filtro_tipo_transacoes(),width=100)
+        self.filtro_tipo.set('')        
+        self.filtro_tipo.grid(row=0,column=3,pady=3,padx=5)
+
+        # botão de filtrar de acordo com o que foi preenchido
+        self.btn_filtrar_view = ctk.CTkButton(self.frame_filtros,text='Filtrar',width=100,command=self.btn_filtrar)
+        self.btn_filtrar_view.grid(row=0,column=4,pady=3,padx=5)
+
+
+        self.entrada_filtro_data_inicio.bind('<ButtonRelease>',self.click_dtinicio)
+        self.entrada_filtro_data_termino.bind('<ButtonRelease>',self.click_dttermino)
+
         # Table Treeview
-        self.frame_treeview = ctk.CTkFrame(self.frame_right)
+        self.frame_treeview = ctk.CTkFrame(self.frame_right,fg_color='blue')
         self.frame_treeview.grid(row=1, column=0, sticky='nsew', pady=5)
+        self.frame_treeview.columnconfigure(0,weight=1)
+        self.frame_treeview.rowconfigure(0,weight=1)
 
         self.treeview_sistema = ttk.Treeview(self.frame_treeview,show='headings',columns=('col1','col2','col3','col4','col5'))
 
@@ -160,6 +190,48 @@ class TelaPrincipal:
             width=80)
         self.btn_atualizar.grid(row=0,column=3,padx=5,pady=5)
 
+    def click_dtinicio(self,e):
+        tela_calendario_dtinicio = ctk.CTkToplevel()
+        def selecao_dtinicio(e):
+            self.data_inicio_selecionada = self.calendario_filtro_inicio.get_date()
+            self.entrada_filtro_data_inicio.insert(0,self.data_inicio_selecionada)
+            tela_calendario_dtinicio.destroy()
+
+        tela_calendario_dtinicio.bind('<ButtonRelease>',selecao_dtinicio)
+
+        tela_calendario_dtinicio.transient(self.master)   # Diz que o Toplevel pertence à janela master
+        tela_calendario_dtinicio.grab_set()         # Bloqueia interação com a janela principal
+        tela_calendario_dtinicio.focus_force()
+
+        self.calendario_filtro_inicio = Calendar(tela_calendario_dtinicio,date_pattern='dd/mm/yyyy')
+        self.calendario_filtro_inicio.pack()
+
+    def click_dttermino(self,e):
+        tela_calendario_dttermino = ctk.CTkToplevel()
+
+        def selecao_dttermino(e):
+            data_termino_selecionada = self.calendario_filtro_termino.get_date()
+            self.entrada_filtro_data_termino.insert(0,data_termino_selecionada)
+            tela_calendario_dttermino.destroy()
+
+        tela_calendario_dttermino.bind('<ButtonRelease>',selecao_dttermino)        
+
+
+        tela_calendario_dttermino.transient(self.master)   # Diz que o Toplevel pertence à janela master
+        tela_calendario_dttermino.grab_set()         # Bloqueia interação com a janela principal
+        tela_calendario_dttermino.focus_force()
+
+        self.calendario_filtro_termino = Calendar(tela_calendario_dttermino,date_pattern='dd/mm/yyyy')
+        self.calendario_filtro_termino.pack()
+           
+    def btn_filtrar(self):
+        TransacaoController.view_treeview_filtrada(
+            dt_inicio=self.entrada_filtro_data_inicio.get(),
+            dt_final=self.entrada_filtro_data_termino.get(),
+            categoria=self.filtro_categoria.get(),
+            tipo=self.filtro_tipo.get()
+        )
+        
     def view_treeview(self):
         self.linhas_view_frame_main = TransacaoController.view_treeview()
         
@@ -208,3 +280,5 @@ class TelaPrincipal:
 
         self.treeview_transacoes.grid(row=0,column=0,sticky='nswe')
         self.view_treeview_transacoes()
+
+       
